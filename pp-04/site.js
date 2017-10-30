@@ -20,15 +20,15 @@ console.log('The value of x is:', x, 'It should be 5.');
 //  like `window.x`):
 
 (function(){
-var x = 5;
-function double(num) {
-  var x = num * 2;
-  return x;
+  var x = 5;
+  function double(num) {
+    var x = num * 2;
+    return x;
 
-}
+  }
 
-double(6);
-console.log('The value of x is:', x, 'It should be 5.');
+  double(6);
+  console.log('The value of x is:', x, 'It should be 5.');
 
 })();
 
@@ -36,15 +36,16 @@ console.log('The value of x is:', x, 'It should be 5.');
 //  the global scope:
 
 function arrayEach(array, func) {
+  var i;
   for (i = 0; i < array.length; i++) {
-    var i;
+
     func(array[i]);
   }
 }
 
-arrayEach(['red','green','blue'], console.log);
+arrayEach(['red', 'green', 'blue'], console.log);
 
-console.log(typeof i) // should be 'undefined', not 3
+console.log(typeof i); // should be 'undefined', not 3
 
 //  4. Explain why this function does not modify the global
 //  variable x declared on line 5 above. Write your explanation
@@ -55,5 +56,12 @@ function addTwo(x) {
   return x;
 }
 
+
 console.log(addTwo(4)); // 6
 console.log(x); // should be 5 if you corrected the double() function above
+
+//This function does not modify the global variable x declared
+//because all variables declared inside of a function is a local variable
+//and all variables declared outside of a function is global and since
+//x = x + 2; and return x; are executed inside of a function, it is local to that function
+//and therefore does not affect the global variable.
