@@ -2,6 +2,9 @@ $(document).ready(function(){
 
   function show(){
    $("#Image").toggle();
+   setTimeout(function() {
+     document.getElementById("Image").style.display="none";
+    }, 2000);
   }
 
   function ringDoorbell() {
