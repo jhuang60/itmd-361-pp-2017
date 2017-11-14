@@ -11,7 +11,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 img {
   display: block;
-  max-width: 100%;
+  max-width: 30%;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 }
 
 h1{
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 /* ===== LAYOUT STYLES ===== */
