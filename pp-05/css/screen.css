@@ -18,6 +18,10 @@ body {
   padding: 10%;
 }
 
+h1{
+  cursor: pointer; 
+}
+
 /* ===== LAYOUT STYLES ===== */
 
 
