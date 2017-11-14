@@ -12,4 +12,8 @@ $(document).ready(function(){
 
  $("#doorbell").remove();
 
+ $("#bell").on("click" , function(){
+ ringDoorbell(); }
+  );
+
 });
