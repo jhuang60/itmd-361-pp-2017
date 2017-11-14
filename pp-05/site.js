@@ -4,5 +4,10 @@ $(document).ready(function(){
     doorbell.play();
   }
 
+  $(document).on("keypress", function(event){
+    if(event.key === "d"){
+      ringDoorbell();
+    }
+  });
 
 });
